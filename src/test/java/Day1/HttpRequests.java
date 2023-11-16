@@ -6,6 +6,10 @@ import static org.hamcrest.Matchers.*;
 
 import java.util.HashMap;
 
+/* given() -> Content Type, SSsett Cookies, Add Auth, Add Param, Set Headers Info etc... 
+ * when() ->  Get, Post, Put, Delete
+ * then() ->  Validate Status Code, Extract Response, Extract Headers Cookies & Response Body... 
+*/
 public class HttpRequests {
     
     int id;
