@@ -49,6 +49,6 @@ public class HeadersDemo {
             System.out.println(hd.getName() +"  "+ hd.getValue());
         }
 
-        //Simple Way -> log().headers();
+        //Simple Way -> log().headers() to show all the headers;
     }   
 }
