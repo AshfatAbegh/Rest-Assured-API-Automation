@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class HeadersDemo {
     
-    //@Test(priority = 1)
+    @Test(priority = 1)
     void testHeaders(){
   
         given()
