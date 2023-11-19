@@ -38,8 +38,9 @@ public class CookiesDemo {
 
             //get all cookies info
             Map<String,String> cookies_values = res.getCookies();
-            //System.out.println(cookies_values.keySet()); ->Return multiple keys
+            System.out.println(cookies_values.keySet()); //->Return multiple keys
 
+            //Retrieving all the values using for loop
             for(String k:cookies_values.keySet()){
                 String Cookie_Value = res.getCookie(k);
                 System.out.println("Cookie Value: " + Cookie_Value);
