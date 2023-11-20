@@ -9,8 +9,6 @@ import io.restassured.response.Response;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
-import java.util.Map;
-
 public class HeadersDemo {
     
     @Test(priority = 1)
