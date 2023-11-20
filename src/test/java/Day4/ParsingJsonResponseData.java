@@ -23,7 +23,7 @@ public class ParsingJsonResponseData {
         // .then()
         //     .statusCode(200)
         //     .header("Content-Type","application/json; charset=utf-8")
-        //     .body("[4].title",equalTo("eum et est occaecati"));
+        //     .body("[4].title",equalTo("nesciunt quas odio"));
         
 
         // Approach 2 -> If we want to perform validation on a seperate response variable and then validate the response
