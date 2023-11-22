@@ -43,6 +43,7 @@ public class FileUploadAndDownload {
 
         .then()
             .statusCode(200)
-            .body("filename", equalTo("Body.json"));
+            .body("[0].filename", equalTo("Body.json"))
+            .body("[1].filename", equalTo("Body2.json"));
     }
 }
