@@ -113,7 +113,7 @@ public class DifferentWaysToCreatePostRequestBody {
     @Test(priority = 1)
     void testPostUsingExternalJsonFile() throws FileNotFoundException {
 
-        File f = new File("/home/ashfatrashid/Downloads/Body.json");
+        File f = new File("\\Body.json");
 
         FileReader fr = new FileReader(f);
 
