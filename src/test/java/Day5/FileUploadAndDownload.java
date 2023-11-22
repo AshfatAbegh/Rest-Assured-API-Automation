@@ -9,17 +9,37 @@ import org.testng.annotations.Test;
 
 public class FileUploadAndDownload {
 
+    // @Test
+    // void singleFileUpload() {
+
+    //     File myfile = new File("/home/ashfatrashid/Downloads/Body.json");
+
+    //     given()
+    //         .multiPart("file", myfile) //Equivalent to form-data with post request body in postman 
+    //         .contentType("multipart/form-data")
+
+    //     .when()
+    //         .post("http://localhost:8080/uploadFile")
+
+    //     .then()
+    //         .statusCode(200)
+    //         .body("filename", equalTo("Body.json"));
+    // }
+
+
     @Test
-    void singleFileUpload() {
+    void multipleFilesUpload() {
 
-        File myfile = new File("/home/ashfatrashid/Downloads/Body.json");
-
+        File myfile1 = new File("/home/ashfatrashid/Downloads/Body.json");
+        File myfile2 = new File("/home/ashfatrashid/Downloads/Body.json");
+       
         given()
-            .multiPart("file", myfile) //Equivalent to form-data with post request body in postman 
+            .multiPart("files", myfile1) //Equivalent to form-data with post request body in postman 
+            .multiPart("files", myfile2) 
             .contentType("multipart/form-data")
 
         .when()
-            .post("http://localhost:8080/uploadFile")
+            .post("http://localhost:8080/uploadMultipleFiles")
 
         .then()
             .statusCode(200)
