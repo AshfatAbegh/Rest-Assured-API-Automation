@@ -1,1 +1,1 @@
-# API Automation of reqres.in using Rest-Assured 
+# Automation of (reqres.in) -> API using Rest-Assured 
