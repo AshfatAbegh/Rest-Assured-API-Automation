@@ -54,7 +54,7 @@ public class Authentications{
     }
 
     @Test(priority = 4)
-    void  testBearerTokenAuthentication(){
+    void  testBearerTokenAuthentication() throws Exception {
         
         String bearerToken = "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";
 
@@ -67,6 +67,35 @@ public class Authentications{
         .then()
            .statusCode(200)
            .log().all();
-    }
+    }  
+       
+       @Test(priority = 5)
+       void testOAuth2(){
+          
+        given()
+           .auth().oauth2("ghp_bsCr0SuUIiuPRnxSN80dbIxqNhvYL42CpHj8")
+
+        .when()
+            .get("https://api.github.com/user/repos")
+
+        .then()
+            .statusCode(200)
+            .log().all();
+       }
+
+
+       @Test(priority = 6)
+       void testAPIKeyAAuthentication(){
+          
+        given()
+           .queryParam("appid", "d8cc1c6d097f620e782b0d2d7527b9de")
+
+        .when()
+            .get("https://api.openweathermap.org/data/2.5/weather?id=2172797")
+
+        .then()
+            .statusCode(200)
+            .log().all();
+       }  
 }
 
