@@ -85,7 +85,7 @@ public class Authentications{
 
 
        @Test(priority = 6)
-       void testAPIKeyAAuthentication(){
+       void testAPIKeyAuthentication(){
           
         given()
            .queryParam("appid", "d8cc1c6d097f620e782b0d2d7527b9de")
