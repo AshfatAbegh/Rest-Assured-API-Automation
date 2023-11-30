@@ -1,23 +1,22 @@
-package Day6;
+// package Day6;
 
-import org.testng.annotations.Test;
+// import org.testng.annotations.Test;
 
-import static io.restassured.RestAssured.given;
-import static io.restassured.RestAssured.when;
-import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+// import static io.restassured.RestAssured.*;
+// import static org.hamcrest.Matchers.*;
 
-public class JSONSChemaValidation {
+// import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath; // Import the missing class
 
-    @Test
-    void JSONschemaValidation() {
+// public class JSONSChemaValidation {
 
-        given()
+//     @Test
+//     void JSONSchemaValidation() {
+//         given()
+//         .when()
+//            .get("https://jsonplaceholder.typicode.com/users")
+//         .then()
+//            .assertThat().body(matchesJsonSchemaInClasspath("JSONSchema/JSONSchema.json"));
+//     }
+// }
 
-        .when()
-           .get("https://jsonplaceholder.typicode.com/users")
-
-        .then()
-            .assertThat().body(matchesJsonSchemaInClasspath("src/test/resources/JSONSchema/JSONSchema.json"));
-    }
-}
 

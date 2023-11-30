@@ -87,15 +87,29 @@ public class Authentications{
        @Test(priority = 6)
        void testAPIKeyAuthentication(){
           
-        given()
-           .queryParam("appid", "d8cc1c6d097f620e782b0d2d7527b9de")
+        //Method1
+        // given()
+        //    .queryParam("appid", "d8cc1c6d097f620e782b0d2d7527b9de")
 
-        .when()
-            .get("https://api.openweathermap.org/data/2.5/weather?id=2172797")
+        // .when()
+        //     .get("https://api.openweathermap.org/data/2.5/weather?id=2172797")
 
-        .then()
+        // .then()
+        //     .statusCode(200)
+        //     .log().all(); 
+
+        //Method2
+         given()
+             .queryParam("appid", "d8cc1c6d097f620e782b0d2d7527b9de")
+             .pathParam("mypath", "data/2.5/weather")
+             .queryParam("id", 2172797)
+         
+         .when()
+             .get("https://api.openweathermap.org/{mypath}")
+         
+         .then()
             .statusCode(200)
             .log().all();
-       }  
+    }
 }
 
